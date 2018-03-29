@@ -61,3 +61,10 @@ add_action( 'wp_enqueue_scripts', function() {
 		true
 	);
 } );
+
+/**
+ * Add plugin HTML output to the end of the document.
+ */
+add_action( 'wp_footer', function() {
+	require_once __DIR__ . '/public/pm.html';
+} );
