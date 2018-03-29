@@ -1,0 +1,46 @@
+.pm {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1001;
+    background: white;
+    color: #333;
+    padding: 12px 20px;
+    font-family: "Fira Code", monospace;
+    font-size: 11px;
+}
+
+.pm table {
+    margin: 0;
+}
+
+.pm thead {
+    font-size: 9px;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.pm tr {
+    border-color: #ededed;
+}
+
+.pm tbody tr:last-child {
+    border-color: transparent;
+}
+
+.pm-time {
+    text-align: right;
+}
+
+.pm-time span {
+    color: #ccc;
+    margin-left: 4px;
+}
+
+tr.strong {
+    font-weight: bold;
+}
+
+tr.border {
+    border-color: #999;
+}
