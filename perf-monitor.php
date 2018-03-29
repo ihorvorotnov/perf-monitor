@@ -48,14 +48,14 @@ add_action( 'wp_enqueue_scripts', function() {
 
 	wp_enqueue_style(
 		'pm-style',
-		plugin_dir_url( __FILE__ ) . '/public/assets/pm.css',
+		plugin_dir_url( __FILE__ ) . 'public/assets/pm.css',
 		null,
 		PERF_MONITOR_VERSION
 	);
 
 	wp_enqueue_script(
 		'pm-script',
-		plugin_dir_url( __FILE__ ) . '/public/assets/pm.js',
+		plugin_dir_url( __FILE__ ) . 'public/assets/pm.js',
 		null,
 		PERF_MONITOR_VERSION
 	);
