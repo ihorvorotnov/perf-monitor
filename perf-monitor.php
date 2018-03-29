@@ -57,6 +57,7 @@ add_action( 'wp_enqueue_scripts', function() {
 		'pm-script',
 		plugin_dir_url( __FILE__ ) . 'public/assets/pm.js',
 		null,
-		PERF_MONITOR_VERSION
+		PERF_MONITOR_VERSION,
+		true
 	);
 } );
