@@ -30,6 +30,7 @@
 
 .pm-time {
     text-align: right;
+    min-width: 80px;
 }
 
 .pm-time span {
