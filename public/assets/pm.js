@@ -20,7 +20,7 @@ window.onload = function () {
 
         Object.entries(data).forEach(
             function ([key, value]) {
-                let timeCol = document.getElementById(`${key}_time`);
+                let timeCol = document.getElementById(`pm_${key}_time`);
                 timeCol.innerHTML = value.toFixed(1) + '<span>ms</span>';
             }
         );
