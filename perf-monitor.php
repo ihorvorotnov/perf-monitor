@@ -40,3 +40,23 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 define( 'PERF_MONITOR_VERSION', '0.1.0' );
+
+/**
+ * Enqueue plugin assets.
+ */
+add_action( 'wp_enqueue_scripts', function() {
+
+	wp_enqueue_style(
+		'pm-style',
+		plugin_dir_url( __FILE__ ) . '/public/assets/pm.css',
+		null,
+		PERF_MONITOR_VERSION
+	);
+
+	wp_enqueue_script(
+		'pm-script',
+		plugin_dir_url( __FILE__ ) . '/public/assets/pm.js',
+		null,
+		PERF_MONITOR_VERSION
+	);
+} );
