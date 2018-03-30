@@ -43,8 +43,13 @@ define( 'PERF_MONITOR_VERSION', '0.1.0' );
 
 /**
  * Enqueue plugin assets.
+ *
+ * Normally, you would use `wp_enqueue_scripts` hook and force scripts
+ * to be loaded in footer. However, styles can't be forced this way
+ * and we don't need them in header either. The `get_footer` hook is a
+ * workaround that allows to outputs both of them in the site footer.
  */
-add_action( 'wp_enqueue_scripts', function() {
+add_action( 'get_footer', function() {
 
 	wp_enqueue_style(
 		'pm-style',
