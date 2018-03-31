@@ -49,8 +49,8 @@ define( 'PERF_MONITOR_VERSION', '0.1.0' );
  * and we don't need them in header either. The `get_footer` hook is a
  * workaround that allows to outputs both of them in the site footer.
  */
-add_action( 'get_footer', function() {
-
+function pm_enqueue_assets()
+{
 	wp_enqueue_style(
 		'pm-style',
 		plugin_dir_url( __FILE__ ) . 'public/assets/pm.css',
@@ -65,11 +65,15 @@ add_action( 'get_footer', function() {
 		PERF_MONITOR_VERSION,
 		true
 	);
-} );
+}
+add_action( 'get_footer', 'pm_enqueue_assets' );
+add_action( 'admin_footer', 'pm_enqueue_assets' );
 
 /**
  * Add plugin HTML output to the end of the document.
  */
-add_action( 'wp_footer', function() {
+function pm_include_template() {
 	require_once __DIR__ . '/public/pm.html';
-} );
+}
+add_action( 'get_footer', 'pm_include_template' );
+add_action( 'admin_footer', 'pm_include_template' );
