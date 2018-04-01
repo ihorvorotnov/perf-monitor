@@ -9,15 +9,15 @@
 
         <tbody>
             <tr>
-                <td>DNS</td>
+                <td>DNS Lookup</td>
                 <td id="pm_dns_time" class="pm-time">0.0<span>ms</span></td>
             </tr>
             <tr>
-                <td>Connect</td>
+                <td>TCP Connect</td>
                 <td id="pm_connect_time" class="pm-time">0.0<span>ms</span></td>
             </tr>
             <tr>
-                <td>SSL</td>
+                <td>SSL Negotiation</td>
                 <td id="pm_ssl_time" class="pm-time">0.0<span>ms</span></td>
             </tr>
             <tr>
@@ -29,20 +29,32 @@
                 <td id="pm_receive_time" class="pm-time">0.0<span>ms</span></td>
             </tr>
             <tr class="border">
-                <td>Render</td>
+                <td>Parse and Render</td>
                 <td id="pm_render_time" class="pm-time">0.0<span>ms</span></td>
             </tr>
-            <tr class="strong">
+            <tr class="border strong">
                 <td>Response Time</td>
                 <td id="pm_total_response_time" class="pm-time">0.0<span>ms</span></td>
             </tr>
             <tr class="strong">
-                <td>DOM Loaded</td>
-                <td id="pm_domloaded_time" class="pm-time">0.0<span>ms</span></td>
+                <td>First Byte</td>
+                <td id="pm_first_byte_time" class="pm-time"><span>@</span>0.0<span>ms</span></td>
+            </tr>
+            <tr class="strong">
+                <td>DOM Interactive</td>
+                <td id="pm_dom_interactive_time" class="pm-time"><span>@</span>0.0<span>ms</span></td>
+            </tr>
+            <tr class="strong">
+                <td>DOM Content Loaded</td>
+                <td id="pm_dom_content_loaded_time" class="pm-time"><span>@</span>0.0<span>ms</span></td>
+            </tr>
+            <tr class="strong">
+                <td>DOM Complete</td>
+                <td id="pm_dom_complete_time" class="pm-time"><span>@</span>0.0<span>ms</span></td>
             </tr>
             <tr class="strong">
                 <td>Load Complete</td>
-                <td id="pm_loaded_time" class="pm-time">0.0<span>ms</span></td>
+                <td id="pm_loaded_time" class="pm-time"><span>@</span>0.0<span>ms</span></td>
             </tr>
         </tbody>
     </table>
