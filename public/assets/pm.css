@@ -4,14 +4,17 @@
     right: 40px;
     z-index: 1001;
     background: white;
-    color: #333;
+    color: #666;
     padding: 12px 20px;
     font-family: "Fira Code", monospace;
     font-size: 11px;
+    line-height: 1.5;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, .1);
 }
 
 .pm table {
     margin: 0;
+    border-collapse: collapse;
 }
 
 .pm thead {
@@ -21,11 +24,23 @@
 }
 
 .pm tr {
-    border-color: #ededed;
+    border-bottom: 1px solid #ededed;
 }
 
 .pm tbody tr:last-child {
-    border-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.pm tr.strong {
+    font-weight: bold;
+}
+
+.pm tr.border {
+    border-bottom-color: #999;
+}
+
+.pm td {
+    padding: .4em;
 }
 
 .pm-time {
@@ -33,15 +48,11 @@
     min-width: 80px;
 }
 
+.pm-time span:first-child {
+    font-weight: normal;
+}
+
 .pm-time span {
     color: #ccc;
     margin-left: 4px;
-}
-
-tr.strong {
-    font-weight: bold;
-}
-
-tr.border {
-    border-color: #999;
 }
